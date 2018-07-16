@@ -1,7 +1,7 @@
 package com.markiantorno.keddit.network.services.viewobjects
 
-import com.markiantorno.keddit.ui.listitems.AdapterConstants
-import com.markiantorno.keddit.ui.listitems.ViewType
+import com.markiantorno.keddit.ui.listitems.adapters.AdapterConstants
+import com.markiantorno.keddit.ui.listitems.adapters.ViewType
 
 data class RedditNewsItem(
         val author: String,

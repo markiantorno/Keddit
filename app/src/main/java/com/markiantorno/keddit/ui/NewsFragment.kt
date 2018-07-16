@@ -12,6 +12,7 @@ import com.markiantorno.keddit.extensions.inflate
 import com.markiantorno.keddit.ui.common.InfiniteScrollListener
 import com.markiantorno.keddit.ui.common.RxBaseFragment
 import com.markiantorno.keddit.network.services.viewobjects.RedditNews
+import com.markiantorno.keddit.ui.listitems.adapters.NewsAdapter
 import kotlinx.android.synthetic.main.news_fragment.*
 
 import rx.schedulers.Schedulers

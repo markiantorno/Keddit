@@ -1,13 +1,8 @@
-package com.markiantorno.keddit.ui
+package com.markiantorno.keddit.ui.listitems.adapters
 
 import android.support.v4.util.SparseArrayCompat
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
-import com.markiantorno.keddit.ui.listitems.AdapterConstants
-import com.markiantorno.keddit.ui.listitems.LoadingDelegateAdapter
-import com.markiantorno.keddit.ui.listitems.NewsDelegateAdapter
-import com.markiantorno.keddit.ui.listitems.ViewType
-import com.markiantorno.keddit.ui.listitems.ViewTypeDelegateAdapter
 import com.markiantorno.keddit.network.services.viewobjects.RedditNewsItem
 import java.util.*
 
