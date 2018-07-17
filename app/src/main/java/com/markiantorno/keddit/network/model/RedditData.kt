@@ -1,7 +1,8 @@
 package com.markiantorno.keddit.network.model
 
-class RedditDataResponse(
-        val children: List<RedditChildrenResponse>,
+data class RedditData(
+        val modhash: String,
+        val children: List<ChildPostObject>,
         val after: String?,
         val before: String?
 )

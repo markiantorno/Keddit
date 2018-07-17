@@ -1,3 +1,3 @@
 package com.markiantorno.keddit.network.model
 
-class RedditNewsResponse(val data: RedditDataResponse)
+data class RedditNewsResponse(val data: RedditData)

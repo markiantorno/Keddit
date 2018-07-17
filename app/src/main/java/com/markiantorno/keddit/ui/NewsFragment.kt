@@ -13,9 +13,9 @@ import com.markiantorno.keddit.ui.common.InfiniteScrollListener
 import com.markiantorno.keddit.ui.common.RxBaseFragment
 import com.markiantorno.keddit.network.services.viewobjects.RedditNews
 import com.markiantorno.keddit.ui.listitems.adapters.NewsAdapter
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.news_fragment.*
 
-import rx.schedulers.Schedulers
 import javax.inject.Inject
 
 class NewsFragment : RxBaseFragment() {
@@ -49,18 +49,18 @@ class NewsFragment : RxBaseFragment() {
     }
 
     private fun requestNews() {
-        val subscription = newsManager.getNews(redditNews?.after ?: "")
-                .subscribeOn(Schedulers.io())
-                .subscribe(
-                        { retrievedNews ->
-                            redditNews = retrievedNews
-                            (news_list.adapter as NewsAdapter).addNews(retrievedNews?.news)
-                        },
-                        { e ->
-                            Snackbar.make(news_list, e.message ?: "", Snackbar.LENGTH_LONG).show()
-                        }
-                )
-        subscriptions.add(subscription)
+//        val subscription = newsManager.getNews(redditNews?.after ?: "")
+//                .subscribeOn(Schedulers.io())
+//                .subscribe(
+//                        { retrievedNews ->
+//                            redditNews = retrievedNews
+//                            (news_list.adapter as NewsAdapter).addNews(retrievedNews?.news)
+//                        },
+//                        { e ->
+//                            Snackbar.make(news_list, e.message ?: "", Snackbar.LENGTH_LONG).show()
+//                        }
+//                )
+//        subscriptions.add(subscription)
     }
 
     private fun initAdapter() {

@@ -2,7 +2,7 @@ package com.markiantorno.keddit.depinjection
 
 import com.markiantorno.keddit.network.services.NewsAPI
 import com.markiantorno.keddit.network.services.NewsRestAPI
-import com.markiantorno.keddit.network.services.RedditApi
+import com.markiantorno.keddit.network.services.RedditService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -13,14 +13,14 @@ class NewsModule {
 
     @Provides
     @Singleton
-    fun provideNewsAPI(redditApi: RedditApi): NewsAPI {
+    fun provideNewsAPI(redditApi: RedditService): NewsAPI {
         return NewsRestAPI(redditApi)
     }
 
     @Provides
     @Singleton
-    fun provideRedditApi(retrofit: Retrofit): RedditApi {
-        return retrofit.create(RedditApi::class.java)
+    fun provideRedditApi(retrofit: Retrofit): RedditService {
+        return retrofit.create(RedditService::class.java)
     }
 
     /**

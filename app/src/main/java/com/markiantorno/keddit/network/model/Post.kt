@@ -1,6 +1,7 @@
 package com.markiantorno.keddit.network.model
 
-class RedditNewsDataResponse(
+data class Post(
+        val id: String,
         val author: String,
         val title: String,
         val num_comments: Int,
